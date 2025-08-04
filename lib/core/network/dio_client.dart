@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:movieapp/core/constants/api_url.dart';
+import 'package:movieapp/core/network/interceptors.dart';
 
 class DioClient {
   late final Dio _dio;
