@@ -4,9 +4,12 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movieapp/core/configs/theme/app_theme.dart';
 import 'package:movieapp/presentation/splash/bloc/splash_cubit.dart';
 import 'package:movieapp/presentation/splash/pages/splash_page.dart';
+import 'package:movieapp/service_locator.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  setupServiceLocator();
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
